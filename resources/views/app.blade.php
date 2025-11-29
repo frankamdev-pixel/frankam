@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" @class(['dark' => ($appearance ?? 'system') == 'dark'])>
     <head>
         <meta charset="utf-8">
@@ -40,10 +40,57 @@
         <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
 
         @viteReactRefresh
+
         @vite(['resources/js/app.tsx', "resources/js/pages/{$page['component']}.tsx"])
         @inertiaHead
     </head>
     <body class="font-sans antialiased">
         @inertia
     </body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" @class(['dark' => ($appearance ?? 'system') == 'dark'])>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="icon" href="./banner.jpg" type="image/svg+xml">
+    {{-- Dark mode detection --}}
+    <script>
+        (function() {
+            const appearance = '{{ $appearance ?? "system" }}';
+            if (appearance === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                document.documentElement.classList.add('dark');
+            }
+        })();
+    </script>
+
+
+    {{-- Background fallback --}}
+    <style>
+        html { background-color: #fff; }
+        html.dark { background-color: #222; }
+    </style>
+
+    <title inertia>{{ config('app.name', 'FrankamDev') }}</title>
+
+    {{-- Favicon --}}
+    <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
+    <link rel="apple-touch-icon" href="{{ asset('apple-touch-icon.png') }}">
+
+    {{-- Fonts --}}
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
+
+    {{-- Vite + React HMR --}}
+    @viteReactRefresh
+    @vite('resources/js/app.tsx')
+
+    {{-- Inertia head --}}
+    @inertiaHead
+</head>
+<body class="font-sans antialiased">
+    @inertia
+</body>
 </html>
