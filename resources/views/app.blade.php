@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" @class(['dark' => ($appearance ?? 'system') == 'dark'])>
     <head>
         <meta charset="utf-8">
@@ -47,10 +47,10 @@
     <body class="font-sans antialiased">
         @inertia
     </body>
-</html> -->
+</html>
 
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" @class(['dark' => ($appearance ?? 'system') == 'dark'])>
 <head>
     <meta charset="utf-8">
@@ -93,4 +93,4 @@
 <body class="font-sans antialiased">
     @inertia
 </body>
-</html>
+</html> -->

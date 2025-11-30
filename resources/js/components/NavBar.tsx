@@ -11,7 +11,7 @@ import {
 } from 'lucide-react';
 import { Fragment, useEffect, useRef, useState } from 'react';
 
-const Navbar = () => {
+const NavBar = () => {
     const { auth } = usePage().props;
     const [scrolled, setScrolled] = useState(false);
     const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -30,7 +30,7 @@ const Navbar = () => {
         },
         {
             name: 'Formations',
-            href: '/formations',
+            href: '/formation',
             icon: <BookOpen size={16} />,
         },
 
@@ -226,4 +226,4 @@ const Navbar = () => {
     );
 };
 
-export default Navbar;
+export default NavBar;

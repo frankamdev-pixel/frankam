@@ -12,7 +12,7 @@ import {
 export default function Footer() {
     return (
         <footer className="bottom-0 w-full bg-[#090c1d] px-6 py-6 text-white">
-            <div className="mx-auto flex max-w-7xl flex-col items-center gap-y-6 md:flex-row md:items-center md:justify-between md:gap-4">
+            <div className=" mx-auto flex max-w-7xl flex-col items-center gap-y-6 md:flex-row md:items-center md:justify-between md:gap-4">
                 <div className="text-center text-sm text-gray-400 md:text-left">
                     © Copyright {new Date().getFullYear()} FrankamDev Pro
                 </div>

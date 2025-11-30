@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Formation;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 
 class FormationController extends Controller
 {
@@ -14,7 +15,7 @@ class FormationController extends Controller
      */
     public function index()
     {
-        //
+        return Inertia::render("Formation/HomeFormation");
     }
 
     /**
