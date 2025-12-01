@@ -202,9 +202,9 @@ export default function Member() {
               <motion.div
                 animate={{ y: [0, 10, 0] }}
                 transition={{ duration: 2, repeat: Infinity }}
-                className="mt-8 text-4xl text-emerald-400"
+                className="mt-8 text-3xl text-emerald-400"
               >
-                Down Arrow
+                ⬇️
               </motion.div>
             </div>
           </motion.div>

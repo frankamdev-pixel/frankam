@@ -17,6 +17,8 @@ import { useEffect } from 'react';
 import { FaArrowRight } from 'react-icons/fa6';
 import { ToastContainer, toast } from 'react-toastify';
 import Hero from './HomeComponents/Hero';
+import DynamicQuote from '@/components/DynamicQuote';
+import Member from '@/components/Member';
 
 const sectionVariants = {
     hidden: { opacity: 0, y: 30 },
@@ -151,7 +153,9 @@ export default function Home() {
                 </motion.section>
 
                 <CercleRotate />
-
+               
+                    
+                <Member/>
                 <Footer />
             </div>
         </>
