@@ -1,4 +1,4 @@
-import { Link } from "@inertiajs/react";
+import { Link, usePage } from "@inertiajs/react";
 import { motion } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa6";
 
@@ -10,7 +10,7 @@ visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
 export default function Hero() {
 const poppins = { fontFamily: "'Poppins', sans-serif" };
 const inter = { fontFamily: "'Inter', sans-serif" };
-
+const { auth  } = usePage().props;
 return (
   <>
 
