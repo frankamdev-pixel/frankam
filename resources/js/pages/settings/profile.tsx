@@ -51,7 +51,7 @@ export default function Profile({
                         {({ processing, recentlySuccessful, errors }) => (
                             <>
                                 <div className="grid gap-2">
-                                    <Label htmlFor="name">Name</Label>
+                                    <Label htmlFor="name" className='text-cyan-900'>Nom <span className='text-2xl'>*</span></Label>
 
                                     <Input
                                         id="name"
@@ -70,7 +70,7 @@ export default function Profile({
                                 </div>
 
                                 <div className="grid gap-2">
-                                    <Label htmlFor="email">Email address</Label>
+                                    <Label className='text-cyan-900' htmlFor="email">Adresse Email <span className='text-2xl'>*</span></Label>
 
                                     <Input
                                         id="email"

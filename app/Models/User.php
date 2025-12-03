@@ -15,7 +15,8 @@ use Spatie\Permission\Traits\HasRoles;
 class User extends Authenticatable
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
-    use HasFactory, Notifiable, TwoFactorAuthenticatable;
+    
+    use HasFactory, Notifiable, TwoFactorAuthenticatable, HasRoles;
 
     /**
      * The attributes that are mass assignable.
@@ -27,8 +28,8 @@ class User extends Authenticatable
         'email',
         'password',
         'country',
-        'bio',
         'city',
+        'bio',
         'profile_photo_path',
     ];
 
@@ -49,10 +50,18 @@ class User extends Authenticatable
     public function getProfilePhotoUrlAttribute()
     {
         return $this->profile_photo_path
-            ? asset('storage/'.$this->profile_photo_path)
+            ? asset('storage/' . $this->profile_photo_path)
             : null;
     }
 
+    /**
+     * Les casts.
+     */
+    protected $casts = [
+        'email_verified_at' => 'datetime',
+        'password' => 'hashed',
+        'two_factor_confirmed_at' => 'datetime',
+    ];
     /**
      * Get the attributes that should be cast.
      *
@@ -82,5 +91,4 @@ class User extends Authenticatable
         return $this->hasMany(Progress::class);
     }
 
-    use HasRoles, Notifiable;
 }
