@@ -24,6 +24,9 @@ export default defineConfig({
         //     formVariants: true,
         // }),
     ],
+      build: {
+        outDir: 'public/build', // doit correspondre au chemin attendu par Laravel
+    },
      resolve: {
         alias: {
             '@': path.resolve(__dirname, 'resources/js'),
