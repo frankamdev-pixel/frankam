@@ -52,7 +52,6 @@ export default function Profile({
                             <>
                                 <div className="grid gap-2">
                                     <Label htmlFor="name" className='text-cyan-900'>Nom <span className='text-2xl'>*</span></Label>
-
                                     <Input
                                         id="name"
                                         className="mt-1 block w-full"
