@@ -1,3 +1,4 @@
+import Waves from "@/components/waves";
 import { Link, usePage } from "@inertiajs/react";
 import { motion } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa6";
@@ -13,7 +14,7 @@ const inter = { fontFamily: "'Inter', sans-serif" };
 const { auth  } = usePage().props;
 return (
   <>
-
+<Waves/>
 <motion.section
 variants={sectionVariants}
 initial="hidden"
